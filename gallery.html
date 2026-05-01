@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Glory Elite Education Centre</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Classic Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -85,8 +84,8 @@
 
         /* --- Gallery Grid --- */
         .container {
-            width: 90%;
-            max-width: 1000px;
+            width: 92%;
+            max-width: 1100px;
             margin: 30px auto;
         }
 
@@ -101,38 +100,42 @@
 
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        /* Desktop view adjustment */
+        @media (min-width: 768px) {
+            .photo-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
         .photo-grid img {
             width: 100%;
-            height: 150px;
+            height: 140px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: transform 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            background: #eee;
         }
 
-        .photo-grid img:active {
-            transform: scale(0.95);
+        .photo-grid img:hover {
+            opacity: 0.8;
         }
 
         .video-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         video {
             width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
             background: #000;
         }
 
-        /* --- Lightbox / Zoom Logic --- */
+        /* --- Lightbox --- */
         #lightbox {
             display: none;
             position: fixed;
@@ -145,19 +148,17 @@
         }
 
         #lightbox img {
-            max-width: 95%;
+            max-width: 90%;
             max-height: 80%;
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            border: 3px solid var(--gold);
         }
 
         #lightbox .close {
             position: absolute;
-            top: 30px;
-            right: 30px;
+            top: 20px;
+            right: 20px;
             color: white;
             font-size: 40px;
-            font-weight: bold;
             cursor: pointer;
         }
 
@@ -191,50 +192,65 @@
 </nav>
 
 <div class="page-header">
-    <h1>Gallery</h1>
-    <p>School Life in Pictures & Videos</p>
+    <h1>School Gallery</h1>
+    <p>Capturing Excellence and Community Impact</p>
 </div>
 
 <div class="container">
-    <h3>Photos</h3>
-    <p>Tap any image to zoom and view in full size.</p>
     
+    <h3>Daily School Life</h3>
     <div class="photo-grid">
-        <img src="images/1.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/2.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/3.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/4.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/5.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/6.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/7.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/8.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/9.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/10.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/11.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/12.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/13.jpg" alt="School Activity" onclick="openLightbox(this.src)">
-        <img src="images/14.jpg" alt="School Activity" onclick="openLightbox(this.src)">
+        <!-- Numbered Images -->
+        <img src="images/1.jpg" onclick="openLightbox(this.src)">
+        <img src="images/2.jpg" onclick="openLightbox(this.src)">
+        <img src="images/3.jpg" onclick="openLightbox(this.src)">
+        <img src="images/4.jpg" onclick="openLightbox(this.src)">
+        <img src="images/5.jpg" onclick="openLightbox(this.src)">
+        <img src="images/6.jpg" onclick="openLightbox(this.src)">
+        <img src="images/7.jpg" onclick="openLightbox(this.src)">
+        <img src="images/8.jpg" onclick="openLightbox(this.src)">
+        <img src="images/9.jpg" onclick="openLightbox(this.src)">
+        <img src="images/10.jpg" onclick="openLightbox(this.src)">
+        <img src="images/11.jpg" onclick="openLightbox(this.src)">
+        <img src="images/12.jpg" onclick="openLightbox(this.src)">
+        <img src="images/13.jpg" onclick="openLightbox(this.src)">
+        <img src="images/14.jpg" onclick="openLightbox(this.src)">
+        <!-- Named Highlights -->
+        <img src="images/kids.jpg" onclick="openLightbox(this.src)">
+        <img src="images/students.jpg" onclick="openLightbox(this.src)">
+        <img src="images/school.jpg" onclick="openLightbox(this.src)">
+        <img src="images/school-building.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <h3>Activities & Learning</h3>
+    <div class="photo-grid">
+        <img src="images/cbc.jpg" onclick="openLightbox(this.src)">
+        <img src="images/extracurricular.jpg" onclick="openLightbox(this.src)">
+        <img src="images/computer.jpg" onclick="openLightbox(this.src)">
+        <img src="images/lib.jpg" onclick="openLightbox(this.src)">
+        <img src="images/lab.jpg" onclick="openLightbox(this.src)">
+        <img src="images/classroom.jpg" onclick="openLightbox(this.src)">
+        <img src="images/alumni.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <h3>Projects & Community</h3>
+    <div class="photo-grid">
+        <img src="images/facilities-overview.jpg" onclick="openLightbox(this.src)">
+        <img src="images/bohehole.jpg" onclick="openLightbox(this.src)">
+        <img src="images/classroom-current.jpg" onclick="openLightbox(this.src)">
+        <img src="images/support.jpg" onclick="openLightbox(this.src)">
+        <img src="images/soweto.jpg" onclick="openLightbox(this.src)">
     </div>
 
     <h3>Videos</h3>
     <div class="video-container">
-        <video controls preload="metadata">
-            <source src="videos/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <video controls preload="metadata">
-            <source src="videos/2.mp4" type="video/mp4">
-        </video>
-        <video controls preload="metadata">
-            <source src="videos/school-trip.mp4" type="video/mp4">
-        </video>
-        <video controls preload="metadata">
-            <source src="videos/uji.mp4" type="video/mp4">
-        </video>
+        <video controls><source src="videos/1.mp4" type="video/mp4"></video>
+        <video controls><source src="videos/2.mp4" type="video/mp4"></video>
+        <video controls><source src="videos/school-trip.mp4" type="video/mp4"></video>
     </div>
+
 </div>
 
-<!-- Lightbox Element -->
 <div id="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="">
@@ -242,8 +258,7 @@
 
 <footer>
     <p><strong>Glory Elite Education Centre</strong></p>
-    <p>Kayole, Nairobi, Kenya</p>
-    <p>&copy; 2026 All Rights Reserved</p>
+    <p>&copy; 2026 | Nairobi, Kenya</p>
 </footer>
 
 <script>
