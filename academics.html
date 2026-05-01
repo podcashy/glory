@@ -1,122 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Academics - Glory Elite Education Centre</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Glory Elite Education Centre</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Classic Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --gold: #D4AF37;
+            --green: #2E7D32;
+            --white: #ffffff;
+            --light-bg: #f4f7f9;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* --- Classic Navigation --- */
+        nav {
+            background: var(--primary-blue);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            width: 95%;
+            margin: auto;
+            text-align: center;
+        }
+
+        nav h2 {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Smart Button Wrap for Mobile */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: var(--gold);
+            color: var(--primary-blue);
+        }
+
+        /* --- Page Header --- */
+        .page-header {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                        url('images/i5.jpg') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin: 0;
+            color: var(--gold);
+        }
+
+        .page-header p {
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* --- Content Layout --- */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            border-left: 4px solid var(--gold);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .image-card {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 15px 0;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 4px solid var(--green);
+            margin: 20px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            columns: 1; /* Default for mobile */
+        }
+
+        @media (min-width: 480px) {
+            ul { columns: 2; }
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- ================= PAGE HEADER (NEW STANDARD) ================= -->
+<nav>
+    <div class="nav-container">
+        <h2>Glory Elite Education Centre</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="projects.html">Support</a>
+            <a href="community.html">Community</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
 <div class="page-header">
-  <h1>Academics</h1>
-  <p>CBC Curriculum & Holistic Learning Approach</p>
+    <h1>Academics</h1>
+    <p>CBC Curriculum & Holistic Learning Approach</p>
 </div>
 
 <div class="container">
 
-<!-- ================= INTRO ================= -->
-<h3>Overview</h3>
+    <!-- ================= INTRO ================= -->
+    <h3>Overview</h3>
+    <img src="images/classroom.jpg" alt="Classroom Learning" class="image-card">
+    <p>
+        Glory Elite Education Centre follows the Competency-Based Curriculum (CBC), which focuses on nurturing learners’ talents, skills, creativity, and practical understanding of real-life situations.
+    </p>
+    <p>
+        We believe education should go beyond textbooks. Our teaching approach ensures that learners develop academically, socially, emotionally, and physically.
+    </p>
 
-<!-- IMAGE ADDED -->
-<img src="images/classroom.jpg" alt="Classroom Learning" style="width:100%; border-radius:10px; margin-bottom:15px;">
+    <!-- ================= CBC CURRICULUM ================= -->
+    <div class="highlight-box">
+        <h3>Competency-Based Curriculum (CBC)</h3>
+        <img src="images/cbc.jpg" alt="CBC Activities" class="image-card">
+        <p>
+            Under the CBC system, learners are actively involved in hands-on activities, group work, problem-solving tasks, and interactive learning sessions. This helps them build confidence, creativity, and critical thinking skills.
+        </p>
+    </div>
 
-<p>
-Glory Elite Education Centre follows the Competency-Based Curriculum (CBC), which focuses on nurturing learners’ talents, skills, creativity, and practical understanding of real-life situations.
-</p>
+    <!-- ================= SUBJECTS ================= -->
+    <h3>Learning Areas</h3>
+    <img src="images/computer.jpg" alt="Computer Lab" class="image-card">
+    <p>We offer a wide range of learning areas including:</p>
+    <ul>
+        <li>English Language</li>
+        <li>Kiswahili Language</li>
+        <li>Mathematics</li>
+        <li>Science & Technology</li>
+        <li>Social Studies</li>
+        <li>Creative Arts</li>
+        <li>Physical & Health Education</li>
+        <li>Computer Studies</li>
+    </ul>
 
-<p>
-We believe education should go beyond textbooks. Our teaching approach ensures that learners develop academically, socially, emotionally, and physically.
-</p>
+    <!-- ================= EXTRACURRICULAR ================= -->
+    <h3>Extracurricular Activities</h3>
+    <img src="images/extracurricular.jpg" alt="Extracurricular Activities" class="image-card">
+    <p>
+        In line with CBC requirements, we strongly support activities that help learners discover their talents and build teamwork, leadership, and confidence.
+    </p>
+    <ul>
+        <li>Sports (Football, Athletics)</li>
+        <li>Music, Dance & Drama</li>
+        <li>Clubs & Societies</li>
+        <li>Environmental Activities</li>
+        <li>Talent Shows</li>
+    </ul>
 
-<!-- ================= CBC CURRICULUM ================= -->
-<h3>Competency-Based Curriculum (CBC)</h3>
+    <!-- ================= EDUCATIONAL TRIPS ================= -->
+    <div class="highlight-box">
+        <h3>Educational Trips</h3>
+        <img src="images/mission.jpg" alt="Educational Trip" class="image-card">
+        <p>
+            Our learners participate in supervised educational trips to museums, parks, and industries. These trips enhance understanding of classroom concepts through real-life exposure.
+        </p>
+    </div>
 
-<!-- IMAGE ADDED -->
-<img src="images/cbc.jpg" alt="CBC Activities" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-<p>
-Under the CBC system, learners are actively involved in hands-on activities, group work, problem-solving tasks, and interactive learning sessions. This helps them build confidence, creativity, and critical thinking skills.
-</p>
-
-<p>
-We ensure that all CBC learning areas are well implemented, including literacy, numeracy, environmental activities, and digital literacy (computer studies).
-</p>
-
-<!-- ================= SUBJECTS ================= -->
-<h3>Learning Areas</h3>
-
-<!-- IMAGE ADDED -->
-<img src="images/computer.jpg" alt="Computer Lab" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-<p>
-We offer a wide range of learning areas including:
-</p>
-
-<ul>
-<li>English Language</li>
-<li>Kiswahili Language</li>
-<li>Mathematics</li>
-<li>Science & Technology</li>
-<li>Social Studies</li>
-<li>Creative Arts</li>
-<li>Physical & Health Education</li>
-<li>Computer Studies (Digital Literacy)</li>
-</ul>
-
-<p>
-Computer studies play a key role in preparing learners for the modern digital world, equipping them with essential ICT skills from an early age.
-</p>
-
-<!-- ================= EXTRACURRICULAR ================= -->
-<h3>Extracurricular Activities</h3>
-
-<!-- IMAGE ADDED -->
-<img src="images/extracurricular.jpg" alt="Extracurricular Activities" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-<p>
-In line with CBC requirements, we strongly support extracurricular activities as part of holistic development. These activities help learners discover their talents and build teamwork, leadership, and confidence.
-</p>
-
-<ul>
-<li>Sports and Games (football, netball, athletics)</li>
-<li>Music, Dance and Drama</li>
-<li>Clubs and Societies</li>
-<li>Environmental Activities</li>
-<li>Talent Shows and Cultural Days</li>
-<li>Art and Craft Activities</li>
-</ul>
-
-<p>
-We regularly organize school trips, educational tours, and outdoor learning experiences that expose learners to real-world environments and broaden their understanding of different subjects.
-</p>
-
-<!-- ================= EDUCATIONAL TRIPS ================= -->
-<h3>Educational Trips</h3>
-
-<!-- IMAGE ADDED -->
-<img src="images/mission.jpg" alt="Educational Trip" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-<p>
-Our learners participate in supervised educational trips to museums, parks, industries, and other learning institutions. These trips enhance understanding of classroom concepts through real-life exposure.
-</p>
-
-<!-- ================= ALUMNI ================= -->
-<h3>Our Alumni</h3>
-
-<!-- IMAGE ADDED -->
-<img src="images/alumni.jpg" alt="Alumni Students" style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-<p>
-We are proud of our former learners who have successfully completed their primary education at Glory Elite Education Centre and have progressed to secondary schools, colleges, and universities.
-</p>
-
-<p>
-Their success is a reflection of our strong academic foundation, discipline, and commitment to quality education. We continue to follow up and celebrate their achievements as part of our extended school family.
-</p>
+    <!-- ================= ALUMNI ================= -->
+    <h3>Our Alumni</h3>
+    <img src="images/alumni.jpg" alt="Alumni Students" class="image-card">
+    <p>
+        We are proud of our former learners who have progressed to secondary schools and colleges. Their success is a reflection of our strong academic foundation and discipline.
+    </p>
 
 </div>
+
+<footer>
+    <p><strong>Glory Elite Education Centre</strong></p>
+    <p>Location: Kayole, Nairobi, Kenya</p>
+    <p>&copy; 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
